@@ -5,7 +5,7 @@ Features:
 
 Check the items, Place an order
 
-Tech Stack: 
+Tech Stack-
 HTML
 CSS
 JavaScript
