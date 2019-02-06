@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> home</title>
+
+<style>
+header
+{	position:relative;
+	background-image:url(bglogo.jpg);
+	
+	height:8 px;
+	width :1500 px;
+	padding: 10px;
+
+}
+body{
+	background-color:lightblue;
+	
+}
+
+tab.button{
+padding: 5px 8px 5px 8px;
+text-align:center;
+color: white;
+font-size:20px;
+background-color:grey;
+
+}
+
+section{
+background-color: white;
+float:center;
+height:350px;
+width:500px;
+padding:10 px;
+border:1px solid black;
+
+}
+
+input{
+height:30px;
+width:300px;
+border-radius: 25px;
+
+}
+
+input.login{
+background-color:pink;
+border-radius: 0px;
+}
+
+a
+{
+text-decoration:none;
+color:red;
+}
+
+
+.errorMessage {
+	color: red;
+	font-size: 20px;
+	float: right;
+}
+
+</style>
+</head>
+<body>
+<header>
+<img src="logo.jpg" width="300" height="160"> </header>
+<br><center>
+<!-- 
+<a href="homepage.html"><tab class="button">Homepage</tab></a> &nbsp; &nbsp;  
+<a href="men.html"><tab class="button">Men</tab></a>  &nbsp; &nbsp; 
+<a href="women.html"><tab class="button">Women</tab></a> &nbsp; &nbsp;
+<a href="contact.html"><tab class="button">Contact us</tab></a> &nbsp; &nbsp;
+ -->
+
+<br>
+<br>
+
+<section>
+<h2>Register to YourShop</h2><br>
+<form action="1.jsp" method="post" onsubmit="login_page.html">
+Name:
+<input type="text" placeholder="  Your Name" height=10  name="n2"><br><br>
+Contact No:
+<input type="text" placeholder="  Your contact " height=10  name="c2"><br><br>
+Email Id:
+<input type="text" placeholder="  Your email address" height=10  name="e2"><br><br>
+Password:
+<input type="password" placeholder=" Enter Password" name="p2" minlength=8 onkeyup="Strength(this.value)"><br><br>
+Confirm Password:
+<input type="password" class="cp" placeholder=" Confirm Password" name="cp2">
+
+<br> <br>
+<span id="password_strength"></span>
+    <script type="text/javascript">
+        function Strength(password) {
+            var password_strength = document.getElementById("password_strength");
+
+            //TextBox left blank.
+            if (password.length == 0) {
+                password_strength.innerHTML = "Enter a passsword";
+                return;
+            }
+            else
+            	if (password.length <8) {
+                    password_strength.innerHTML = "Password should be of minimum 8 character long";
+                    return;
+            	}
+            	else{
+            //Regular Expressions.
+            var str = new Array();
+            str.push("[A-Z]"); //Uppercase Alphabet.
+            str.push("[a-z]"); //Lowercase Alphabet.
+            str.push("[0-9]"); //Digit.
+            str.push("[$@$!%*#?&]"); //Special Character.
+
+            var passed = 0;
+
+            //Validate for each Regular Expression.
+            for (var i = 0; i < str.length; i++) {
+                if (new RegExp(str[i]).test(password)) {
+                    passed++;
+                }
+            }
+
+            //Validate for length of Password.
+            if (passed > 2 && password.length > 8) {
+                passed++;
+            }
+
+            //Display status.
+            var color = "";
+            var strength = "";
+            switch (passed) {
+                case 0:
+                case 1:
+                    strength = "Weak";
+                    color = "red";
+                    break;
+                case 2:
+                    strength = "Good";
+                    color = "darkorange";
+                    break;
+                case 3:
+                case 4:
+                    strength = "Strong";
+                    color = "green";
+                    break;
+                case 5:
+                    strength = "Very Strong";
+                    color = "darkgreen";
+                    break;
+            }
+            password_strength.innerHTML = strength;
+            password_strength.style.color = color;
+        }
+        }
+    </script>
+
+<input type="submit" class="login" value="Login"><br>
+<br>
+<h4>Already have account?<a href="login_page.html">Log in from here</a><br></h4>
+
+</section>

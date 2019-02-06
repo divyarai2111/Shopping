@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head> <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $('#checkBtn').click(function() {
+      checked = $("input[type=checkbox]:checked").length;
+
+      if(!checked) {
+        alert("You must check at least one checkbox.");
+        return false;
+      }
+
+    });
+});
+
+
+
+$(document).ready(function () {
+    $('.checkRadio').click(function() {
+      checked = $("input[type=radio]:checked").length;
+
+      if(!checked) {
+        alert("Please select payment options.");
+        return false;
+      }
+
+    });
+});
+
+</script>
+
+<style>
+header
+{	position:relative;
+	background-image:url(bglogo.jpg);
+	
+	height:8 px;
+	width :1500 px;
+	padding: 10px;
+
+}
+body{
+	background-image:
+		url("bg2.png");
+	
+}
+
+
+input.a{
+height:20px;
+width:300px;
+border-radius: 25px;
+
+}
+
+
+input.s{
+background-color:pink;
+height:20px;
+width:150px;
+
+}
+
+textarea.a{
+height:20px;
+width:300px;
+border-radius: 25px;
+
+}
+
+
+
+section{
+background-color: white;
+float:center;
+height:500px;
+width:600px;
+padding:10 px;
+border:1px solid black;
+
+}
+n.button{
+padding: 5px 6px 5px 6px;
+text-align:center;
+color: white;
+font-size:20px;
+
+background-color:grey;
+
+}
+
+body{
+	background-color:lightblue;
+	
+}
+-
+</style>
+</head>
+<body>
+<header>
+<img src="logo.jpg" width="250" height="150"> </header>
+<br><br><center>
+<a href="homepage.html"><n class="button">Homepage</n></a> ||  
+<a href="men.html"><n class="button">Men</n></a>  || 
+<a href="women.html"><n class="button">Women</n></a>
+<a href="contact.html"><n class="button">Contact us</n></a>
+<br>
+</center><br>
+
+
+<form name="form1"  method="post">
+<center>
+<section>
+<font size=5>
+<b>Please porceed to shop:</b></font><br>
+
+<font size=4 color="grey"><br>
+
+<font color="balck"> 
+Your name:</font> &nbsp; &nbsp;
+   <input type="text" name="fname" placeholder="First name" autofocus class=a required><br>
+  
+<font color="balck"> 
+
+ 
+<p> <font color="balck">
+
+Mobile Number :</font> &nbsp; &nbsp;
+   <input type="text" name="no" placeholder="10 digit number" class=a required><br></p>
+
+<p>
+<font color="balck">
+Pincode:</font>&nbsp; &nbsp;
+
+ <input type="number" class=a placeholder="06 digit number" maxlength="6" required><br></p>
+
+<p> 
+<font color="balck">
+Address : </font> &nbsp; &nbsp;
+   <textarea name="add" class=a required> </textarea><br></p>
+
+<font color="balck">Email :</font>  &nbsp; &nbsp;
+
+   <input type="email" class=a name="email" required><br><br></p>
+
+
+<font color="balck">Landmark ; </font>  &nbsp; &nbsp;
+
+<input type="text" name="landmark"   class=a required></p>
+<br>
+
+<font color="balck">Size :</font> &nbsp; &nbsp;
+
+  <input type="checkbox" name="size"   value=a > S &nbsp;
+  <input type="checkbox" name="size"  value=b >M  &nbsp;
+<input type="checkbox" name="size"    value=c > L &nbsp;
+<input type="checkbox" name="size"   value=d > XL &nbsp;
+<input type="checkbox" name="size"  value=e > XXL&nbsp;
+
+
+<br><br>
+<font color="balck">Payment mode :</font> &nbsp; &nbsp;
+
+  <input type="radio" name="payment" value=1 >Cash on delivery &nbsp;
+  <input type="radio" name="payment" value=2 >Credit Card  &nbsp;
+<input type="radio" name="payment" value=3 > Debit card &nbsp;
+ 
+
+  <br>
+<p> 
+
+<center>
+<input type="submit" value="submit" id="checkBtn" class="checkRadio s">&nbsp; &nbsp; <input type="reset" value="reset" class=s>
+</section></form>
